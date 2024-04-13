@@ -10,11 +10,6 @@ export default class AuthContent extends React.Component {
         };
     };
 
-    componentDidMount() {
-        request('GET', '/login', {}).then((response) => {
-            this.setState({ data: response.data });
-        });
-    };
 
     render() {
         return (
