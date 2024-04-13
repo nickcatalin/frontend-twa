@@ -38,7 +38,7 @@ export const logout = () => {
   setAuthHeader(null);
 };
 
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://backend-pweb.onrender.com";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 export const request = (method, url, data) => {
