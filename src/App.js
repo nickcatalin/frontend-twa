@@ -74,7 +74,7 @@ function App() {
 
   const startContent = (
     <div className="flex justify-center items-center">
-      <p>TrustPilot</p>
+      <p>WebGuardian</p>
     </div>
   );
 
