@@ -291,6 +291,14 @@ export default function AdminListUsers() {
           style={{ minWidth: "12rem" }}
         />
         <Column
+          field="roles"
+          header="Roles"
+          body={(rowData) => rowData.roles.map((role) => role.name).join(", ")}
+          filter
+          filterPlaceholder="Search by roles"
+          style={{ minWidth: "12rem" }}
+        />
+        <Column
           body={actionBodyTemplate}
           header="Actions"
           style={{ minWidth: "8rem", textAlign: "center" }}

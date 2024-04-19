@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ListLinks from "./components/ListLink";
 import AdminListUsers from "./components/admin/ListUsers";
+import Feedback from "./components/Feedback";
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -52,7 +53,7 @@ function App() {
     }
   }, [selectedComponent]);
 
-  let componentOptions = [{ label: "List Links", value: "ListLinks" }];
+  let componentOptions = [{ label: "List Links", value: "ListLinks" }, { label: "Feedback", value: "Feedback" }];
 
   if (isUserAdmin()) {
     componentOptions.push(
@@ -118,6 +119,8 @@ function App() {
         return <ListLinks />;
       case "AdminListUsers":
         return <AdminListUsers />;
+      case "Feedback":
+        return <Feedback />;
       default:
         return null;
     }

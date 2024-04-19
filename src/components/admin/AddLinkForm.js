@@ -81,6 +81,7 @@ export default class AddLinkForm extends React.Component {
                   <label htmlFor="description">Description</label>
                 </FloatLabel>
               </div>
+              {/* active toggle */}
               <div className="p-fluid flex justify-center">
                 <Button
                   type="submit"
