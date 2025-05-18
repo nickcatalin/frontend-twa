@@ -13,6 +13,7 @@ import Register from "./components/Register";
 import ListLinks from "./components/ListLink";
 import AdminListUsers from "./components/admin/ListUsers";
 import Feedback from "./components/Feedback";
+import AdminDashboard from "./components/admin/AdminDashboard";
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -57,6 +58,7 @@ function App() {
 
   if (isUserAdmin()) {
     componentOptions.push(
+      { label: "Admin Dashboard", value: "AdminDashboard" },
       { label: "Admin List Links", value: "AdminListLinks" },
       { label: "Admin List Users", value: "AdminListUsers" }
     );
@@ -121,6 +123,8 @@ function App() {
         return <AdminListUsers />;
       case "Feedback":
         return <Feedback />;
+      case "AdminDashboard":
+        return <AdminDashboard />;
       default:
         return null;
     }
